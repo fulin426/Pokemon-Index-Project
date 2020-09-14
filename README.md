@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-![alt text](https://www.dropbox.com/s/pq9g1hblm37tp8g/pokemon-web.png)
+![mock png](https://github.com/fulin426/Pokemon-Index-Project/blob/master/public/mock.png)
 
 ## Available Scripts
 
