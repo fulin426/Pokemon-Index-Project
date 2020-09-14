@@ -28,7 +28,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-function DetailsDialogue({ data, showPokemonProfile, closeDialogue }) {
+function DetailsDialog({ data, showPokemonProfile, closeDialog }) {
   const classes = useStyles();
   const { name, stats, base_experience, weight, types, id } = data;
   if (!showPokemonProfile) return null;
@@ -58,10 +58,10 @@ function DetailsDialogue({ data, showPokemonProfile, closeDialogue }) {
       </Box>
       {profileStats.map(stat => <Typography key={stat.name} className={classes.stat}>{stat}</Typography>)}
       <Box display='flex' justifyContent='flex-end' mt={15}>
-          <PageButton name={'Close'} callback={closeDialogue} />
+          <PageButton name={'Close'} callback={closeDialog} />
         </Box>
     </Box>
   );
 }
 
-export default DetailsDialogue;
+export default DetailsDialog;

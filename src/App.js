@@ -5,7 +5,7 @@ import Typography from '@material-ui/core/Typography';
 
 import ListItem from './components/ListItem';
 import PageButton from './components/PageButton';
-import DetailsDialogue from './components/DetailsDialogue';
+import DetailsDialog from './components/DetailsDialog';
 
 const Pokedex = require('pokeapi-js-wrapper');
 const P = new Pokedex.Pokedex();
@@ -58,13 +58,13 @@ function App() {
     });
   }
 
-  const closeDialogue = () => {
+  const closeDialog = () => {
     setShowPokemonProfile(false);
   }
 
-  const renderListOrDialogue = () => {
+  const renderListOrDialog = () => {
     if (showPokemonProfile) {
-      return <DetailsDialogue data={pokemonInfo} showPokemonProfile={showPokemonProfile} closeDialogue={closeDialogue}/>;
+      return <DetailsDialog data={pokemonInfo} showPokemonProfile={showPokemonProfile} closeDialog={closeDialog}/>;
     } else {
       return (
         <div>
@@ -88,7 +88,7 @@ function App() {
       <Box display='flex' justifyContent='center' mb={4} mt={4}>
         <Typography variant='h4'>Pokemon Index</Typography>
       </Box>
-      {renderListOrDialogue()}
+      {renderListOrDialog ()}
     </Container>
   );
 }
